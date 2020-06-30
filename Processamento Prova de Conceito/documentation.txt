@@ -1,0 +1,43 @@
+# ## read method ##
+# __init__ read data
+
+# ## data trasform methods (should be call before any other method!) ##
+# (tested) RF_downconversion(self) make downconversion
+# (tested) slowtime_cut(self,time_start,time_end) cut data 
+# (tested) subtractMean(self) subctract mean and remove static clutter
+# (tested FMCW) Phase_conversion
+
+# ## get methods ##
+# data_(self) get all data!
+# fps(self):
+# fs(self):
+# fc(self):
+# fasttime_size(self):
+# slowtime_size(self):
+# def time_per_bin(self): only for UWB, return number of bin per sample
+# distance_to_bin(self, distance): only for UWB, return distance to bin
+ 
+# ## methods for axis ##
+# distance_axis(self): return distance axis
+# time_axis(self) return time axis
+# fasttime_axis(self): return fast time axis (bin of distance axis)   
+# slowtime_axis(self): return slow time axis( bin of time axis)
+# freq(self): return frequeny axis -- with shift to be used in plot frequency!
+
+# ## method for frame acquisiton ##   
+# data_frame(self, time): return data along axis in a fixed time
+# distance(self,distance): return data along axis in a fixed distance (it is the used to measure breathing)
+   
+# ## plot graphs
+# (tested) plot_matrix_radar(self, bas, title): plot 2D graph
+# (tested) plot_matrix_radar_3D(self, bas, title): plot 3D graph
+# (tested) plot_range_doppler_matrix(self, bas, title = "None") Plot 2D Range Doppler Matrix
+# (tested) plot_3D_spectrum(self, bas, title = "None"): Plot 3D Range Doppler Matrix
+# # plot index funcions below
+# plot_signal_time(self,time): plot frame at index x (need the exact index to work!)
+# plot_signal_distance(self, distance, bas = "optional"): plot frame distance at index x (need the exact index to work!) -- (it is the used to measure breathing)
+# (tested) plot_spectrum_index(self, bas, index, title = "None"): plot spectrum at index of matrix (and not the exact distance!)
+
+# ## auxiliar methods (used as intermediate in functions above)
+# range_doppler_along_slowtime(self): make range doople along slow time after hamming application (REVER)
+# range_doppler_along_fasttime(self): make range doople along slow time without hamming application 

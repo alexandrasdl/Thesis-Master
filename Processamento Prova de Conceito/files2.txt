@@ -1,0 +1,4 @@
+# filename | distance | bitalino_start_time | uwb_start_time | uwb_end_time | fmcw_start_time | fmcw_end_time | bitalino_end_time 
+#
+# wilson 0.5 813 820 889 904.5 973 979.5
+# joana 42.3 56 61 122 140
